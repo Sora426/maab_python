@@ -29,6 +29,21 @@ vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
 u = sum(1 for ch in s if ch in vowels)
 c=len(s)-u
 print("Number of vowels:", u , "number of consonants: ", c)
+#6-problem
+str1 = input("enter text: ")
+
+str2 = input("enter another text: ")
+
+str3 = input("enter another text: ")
+
+print(f'"{str1}" contains "{str2}" = {str2 in str1}')
+print(f'"{str1}" contains "{str2.lower()}" = {str2.lower() in str1}')
+print(f'"{str1}" contains "{str3}" = {str3 in str1}')
+
+if str2 in str1:
+    print(f'"{str1}" contains "{str2}"')
+else:
+    print(f'"{str1}" does not contain "{str2}"')
 #7-problem
 s=input("Input sentence: ")
 r=input("replace: ")
