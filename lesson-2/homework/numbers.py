@@ -1,4 +1,3 @@
-#hi
 #1-problem
 n=float(input("enter the number: "))
 print(round(n,2))

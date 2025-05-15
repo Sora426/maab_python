@@ -1,4 +1,3 @@
-#hi
 #1-problem
 s=input("enter username: ")
 p=input("enter password: ")

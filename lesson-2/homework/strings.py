@@ -10,19 +10,8 @@ st=input("input text: ")
 print(len(st),st.upper(), st.lower())
 #4-problem
 r=input()
-is_palindrome = True  
-i,j = 0, len(s) - 1
-while i < j:
-    if r[i] != r[j]:  
-        is_palindrome = False
-        break
-    i += 1
-    j -= 1
-
-if is_palindrome:
-    print("Yes") 
-else:
-    print("No")
+y=r[::-1]
+print(r==y)
 #5-problem
 s = input()
 vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'}
@@ -36,9 +25,9 @@ str2 = input("enter another text: ")
 
 str3 = input("enter another text: ")
 
-print(f'"{str1}" contains "{str2}" = {str2 in str1}')
-print(f'"{str1}" contains "{str2.lower()}" = {str2.lower() in str1}')
-print(f'"{str1}" contains "{str3}" = {str3 in str1}')
+print(str1 in str2)
+print(str1 in str3)
+print(str2 in str3)
 
 if str2 in str1:
     print(f'"{str1}" contains "{str2}"')
@@ -74,15 +63,12 @@ print(s==d)
 #15-problem
 s = input().split()
 for i in s:
-    print(s[0], end="")
+    print(s[i], end="")
 #16-problem
 s=input()
 d=input()
-def remove(s, d):
-  
-  s = s.replace(d, "")
-
-print(remove(s, d))
+s = s.replace(d, "")
+print(s)
 #17-problem
 s= input("Enter a string: ")
 symbol = input("Enter the replacement symbol: ")
