@@ -3,6 +3,7 @@
 k=list(map(input("enter list ").split()))
 h=input("enter element")
 print(k.count(h))
+
 #2-problem
 k=list(map(int,input("enter list ").split()))
 print(sum(k))
@@ -26,8 +27,7 @@ k=list(map(input("enter list ").split()))
 if len(k)==0:
     print("the list is empty ")
 else:
-
-   print(k[0])
+    print(k[0])
 
 #7-problem
 k=list(map(input("enter list ").split()))
@@ -59,14 +59,14 @@ print(list(set(k)))
 #12-problem
 k=list(map(input("enter list ").split()))
 u=input("enter element: ")
-i=input("enter index: ")
+i=int(input("enter index: "))
 k[i]=u
 print(k)
 
 #13-problem
 k=list(map(input("enter list ").split()))
 u=input("enter element: ")
-print(k.index(u))
+print("the index of element is: ",k.index(u))
 
 #14-problem
 k=list(map(input("enter list ").split()))
@@ -81,7 +81,7 @@ o=0
 for i in k:
     if i%2==0:
         o+=1
-print("there are f{o} even numbers")
+print(f"there are {o} even numbers")
 
 #16-problem
 k=list(map(int,input("enter list ").split()))
@@ -89,7 +89,7 @@ o=0
 for i in k:
     if i%2==1:
         o+=1
-print("there are f{o} even numbers")
+print(f"there are {o} even numbers")
 
 #17-problem
 k=list(map(input("enter list ").split()))
@@ -138,11 +138,11 @@ for i in k:
 print("list cointain from odd numbers: ",o)
 
 #24-problem
-k=list(map(int,input("enter list ").split()))
+k=list(map(input("enter list ").split()))
 print(len(k))
 
 #25-problem
-k=list(map(int,input("enter list ").split()))
+k=list(map(input("enter list ").split()))
 m=k.copy()
 print("there is copy list ",m)
 
@@ -156,8 +156,8 @@ else:
     
 #27-problem
 k=list(map(input("enter list ").split()))
-s=input("starting index: ")
-n=input("finishing index: ")
+s=int(input("starting index: "))
+n=int(input("finishing index: "))
 t=0
 for i in range(s,n+1):
      if k[i]>t:
@@ -166,8 +166,8 @@ print("maximum number in sublist is ",t)
 
 #28-problem
 k=list(map(input("enter list ").split()))
-s=input("starting index: ")
-n=input("finishing index: ")
+s=int(input("starting index: "))
+n=int(input("finishing index: "))
 t=1e15
 for i in range(s,n+1):
      if k[i]<t:
@@ -176,8 +176,8 @@ print("minimum number in sublist is ",t)
 
 #29-problem
 k=list(map(input("enter list ").split()))
-s=input(  "index: ")
-if abs(s)<k:
+s=int(input(  "index: "))
+if abs(s)<len(k):
     k.remove(k[s])
 print("final list:",k)
 
@@ -188,7 +188,7 @@ print(k==sorted(m))
 
 #31-problem
 k=list(map(input("enter list ").split()))
-n=input("enter the number: ")
+n=int(input("enter the number: "))
 o=[]
 for i in k:
      o.append(n*i)
@@ -215,11 +215,14 @@ rotated_right = k[-n:] + k[:-n]
 print("rotated list: ",rotated_right)
 
 #35-problem
-k=list(map(input("enter list ").split()))
-s=input("starting index: ")
-n=input("finishing index: ")
-m=k[s,n]
-print(m)
+import random
+
+no = 10
+a = 10 # start
+b = 400 # end
+
+res = list(random.choices(range(a, b + 1), k=no))
+print(res)
 
 #36-problem
 k=list(map(int,input("enter list ").split()))
@@ -239,16 +242,9 @@ print("sum of negative numbers=  ",summ)
 
 #38-problem
 k=list(map(int,input("enter list ").split()))
-is_palindrome = True  
-i,j = 0, len(s) - 1
-while i < j:
-    if k[i] != k[j]:  
-        is_palindrome = False
-        break
-    i += 1
-    j -= 1
-
-if is_palindrome:
+t=k[::-1] 
+u=(k==t)
+if u is True:
     print("Yes , list is polidrom") 
 else:
     print("No , list is not polidrom")
