@@ -5,7 +5,7 @@ thisdict = {
   "model": "Mustang",
   "year": 1964
 }
-print(thisdict.get["model"])
+print(thisdict.get("model"))
 #2-problem
 key="age"
 print(key in thisdict)
